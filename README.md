@@ -36,7 +36,7 @@ sharing-app/
 │   │   └── AddItemModal.js     # Modal สำหรับเพิ่มรายการอาหารใหม่
 │   ├── App.js                  # ไฟล์หลักที่รวม Components ต่าง ๆ
 │   ├── index.js
-│   └── App.css                 # สไตล์พื้นฐานของแอป
+│   └── App.css                 # สไตล์ css พื้นฐานของแอป
 └── package.json
 ```
 
