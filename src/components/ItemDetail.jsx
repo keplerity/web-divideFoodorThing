@@ -1,6 +1,7 @@
 import React from 'react';
 import { TableCell, TableRow } from '@mui/material';
 
+// ฟังก์ชั่นสำหรับหารจำนวนราคาให้เท่ากับคนให้ปัดเศษขึ้นหากมีเศษ
 const ItemDetail = ({ item, numPeople }) => {
   const perPerson = Math.ceil((item.price / numPeople)).toFixed(2);
 

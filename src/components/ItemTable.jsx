@@ -13,6 +13,7 @@ const ItemTable = ({ items, numPeople }) => {
             <TableCell align="right">จ่ายคนละ (บาท)</TableCell>
           </TableRow>
         </TableHead>
+        {/* Loop item โดยใช้ map */}
         <TableBody>
           {items.map((item) => (
             <ItemDetail key={item.id} item={item} numPeople={numPeople} />

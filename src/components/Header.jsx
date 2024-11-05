@@ -1,7 +1,8 @@
-import React from 'react';
-import { Box, Typography, TextField, Button } from '@mui/material';
+import React from "react";
+import { Box, Typography, TextField, Button } from "@mui/material";
 
 const Header = ({ numPeople, setNumPeople, openModal }) => {
+  
   // ฟังก์ชันจัดการการเปลี่ยนค่า numPeople
   const handleNumPeopleChange = (e) => {
     const value = e.target.value;
@@ -15,9 +16,8 @@ const Header = ({ numPeople, setNumPeople, openModal }) => {
           label="จำนวนคน"
           type="number"
           variant="outlined"
-          value={numPeople === 0 ? '' : numPeople} // แสดง "" ถ้าค่าเป็น 0
+          value={numPeople === 0 ? "" : numPeople} // แสดง "" ถ้าค่าเป็น 0
           onChange={handleNumPeopleChange}
-          InputProps={{ inputProps: { min: 1 } }}
         />
       </Box>
       <Button variant="contained" color="primary" onClick={openModal}>
