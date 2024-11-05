@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import ItemTable from "./components/ItemTable";
 import AddItemModal from "./components/AddItemModal";
 import Navigation from "./components/Navigation";
+import Footer from "./components/Footer";
 
   // import mui
 import { Box, Container, Paper, Typography } from "@mui/material";
@@ -63,7 +64,9 @@ function App() {
             addItem={addItem}
           />
         </Box>
+        
       </Container>
+      <Footer />
     </>
   );
 }
