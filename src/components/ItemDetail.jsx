@@ -2,7 +2,7 @@ import React from 'react';
 import { TableCell, TableRow } from '@mui/material';
 
 const ItemDetail = ({ item, numPeople }) => {
-  const perPerson = (item.price / numPeople).toFixed(2);
+  const perPerson = Math.ceil((item.price / numPeople)).toFixed(2);
 
   return (
     <TableRow>

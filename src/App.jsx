@@ -3,6 +3,7 @@ import Header from './components/Header';
 import ItemTable from './components/ItemTable';
 import AddItemModal from './components/AddItemModal';
 import { Box, Container, Paper, Typography } from '@mui/material';
+import Navigation from './components/Navigation';
 
 function App() {
   const [numPeople, setNumPeople] = useState(1);
@@ -18,10 +19,13 @@ function App() {
 
   const totalAmount = items.reduce((sum, item) => sum + parseFloat(item.price || 0), 0);
   // ใช้ค่า numPeople โดยให้ค่า default เป็น 1 ถ้าเป็นค่าว่าง
-const totalAmountPerPerson = totalAmount / (numPeople || 1);
+const totalAmountPerPerson = Math.ceil(totalAmount / (numPeople || 1));
 
   return (
+    <>
+    <Navigation />
     <Container>
+      
       <Box mt={4}>
         <Header 
           numPeople={numPeople} 
@@ -43,6 +47,7 @@ const totalAmountPerPerson = totalAmount / (numPeople || 1);
         <AddItemModal isOpen={isModalOpen} closeModal={closeModal} addItem={addItem} />
       </Box>
     </Container>
+    </>
   );
 }
 

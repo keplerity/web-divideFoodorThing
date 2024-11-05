@@ -5,7 +5,6 @@ import ItemDetail from './ItemDetail';
 const ItemTable = ({ items, numPeople }) => {
   return (
     <TableContainer component={Paper} sx={{ mt: 4 }}>
-      <Typography variant="h6" sx={{ textAlign: 'center', mt: 2 }}>รายการอาหาร</Typography>
       <Table>
         <TableHead>
           <TableRow>

@@ -16,7 +16,16 @@ const modalStyle = {
 const AddItemModal = ({ isOpen, closeModal, addItem }) => {
   const [itemName, setItemName] = useState('');
   const [itemPrice, setItemPrice] = useState('');
-
+  
+  const handlePriceChange = (e) => {
+    const value = e.target.value;
+  
+    // ตรวจสอบว่าเป็นค่าว่างหรือเป็นตัวเลขบวก
+    if (value === "" || (/^\d*\.?\d*$/.test(value) && parseFloat(value) >= 0)) {
+      setItemPrice(value); // ใช้ value โดยตรง ไม่แปลงเป็นตัวเลข เพื่อเก็บค่าว่างได้
+    }
+  
+  };
   const handleAdd = () => {
     if (itemName && itemPrice) {
       addItem(itemName, parseFloat(itemPrice));
@@ -44,7 +53,7 @@ const AddItemModal = ({ isOpen, closeModal, addItem }) => {
           variant="outlined"
           fullWidth
           value={itemPrice}
-          onChange={(e) => setItemPrice(e.target.value)}
+          onChange={handlePriceChange}
           sx={{ mb: 2 }}
         />
         <Box display="flex" justifyContent="space-between" mt={2}>
