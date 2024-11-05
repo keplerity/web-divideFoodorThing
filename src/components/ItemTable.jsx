@@ -1,0 +1,27 @@
+import React from 'react';
+import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Typography } from '@mui/material';
+import ItemDetail from './ItemDetail';
+
+const ItemTable = ({ items, numPeople }) => {
+  return (
+    <TableContainer component={Paper} sx={{ mt: 4 }}>
+      <Typography variant="h6" sx={{ textAlign: 'center', mt: 2 }}>รายการอาหาร</Typography>
+      <Table>
+        <TableHead>
+          <TableRow>
+            <TableCell>ชื่อรายการ</TableCell>
+            <TableCell align="right">ราคา (บาท)</TableCell>
+            <TableCell align="right">จ่ายคนละ (บาท)</TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {items.map((item) => (
+            <ItemDetail key={item.id} item={item} numPeople={numPeople} />
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
+  );
+};
+
+export default ItemTable;
