@@ -51,7 +51,7 @@ const AddItemModal = ({ isOpen, closeModal, addItem }) => {
           <Button variant="contained" color="primary" onClick={handleAdd}>
             บันทึกรายการ
           </Button>
-          <Button variant="outlined" color="secondary" onClick={closeModal}>
+          <Button variant="outlined" color="danger" onClick={closeModal}>
             ยกเลิก
           </Button>
         </Box>
