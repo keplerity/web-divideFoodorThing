@@ -5,7 +5,7 @@ import AddItemModal from './components/AddItemModal';
 import { Box, Container, Paper, Typography } from '@mui/material';
 
 function App() {
-  const [numPeople, setNumPeople] = useState(1);
+  const [numPeople, setNumPeople] = useState(0);
   const [items, setItems] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
