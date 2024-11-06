@@ -53,7 +53,7 @@ function App() {
             >
               <Typography variant="h6">ยอดรวมทั้งหมด</Typography>
               <Typography variant="h4" color="primary">
-                {totalAmount.toFixed(2)} บาท
+                {totalAmountPerPerson.toFixed(2)} บาท
               </Typography>
             </Paper>
           </Box>
